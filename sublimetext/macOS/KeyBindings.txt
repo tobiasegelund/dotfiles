@@ -1,0 +1,8 @@
+[
+    { "keys": ["super+'"], "command": "toggle_comment", "args": { "block": false } },
+    // { "keys": ["super+"], "command": "toggle_comment", "args": { "block": true } },
+    { "keys": ["option+up"], "command": "swap_line_up" },
+    { "keys": ["option+down"], "command": "swap_line_down" },
+    { "keys": ["super+e"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+    // { "keys": ["super+shift+h"], "command": "expand_selection", "args": {"to": "scope"} },
+]

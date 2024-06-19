@@ -1,0 +1,28 @@
+{
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.enabled": true,
+  "python.jediEnabled": true,
+  "python.linting.flake8Path": "/Library/Frameworks/Python.framework/Versions/3.8/bin/flake8",
+
+  "python.linting.flake8Args": [
+    "--ignore=D205,D100,D102,D105,D106,D107,E501, E722"
+  ],
+
+  "suggest.enablePreview": true,
+  "suggest.removeDuplicateItems": true,
+
+  "html.enable":true,
+  "html.validate.scripts": true,
+  "html.format.enable": true,
+  "clangd.path": "/Users/tobiasegelund/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd",
+  "clangd.enabled": true,
+  "clangd.disableDiagnostics": false,
+
+  "sh.enable": true,
+    {
+      "go.disable": {
+        "workspaceFolders": false
+      }
+    }
+}

@@ -1,0 +1,15 @@
+"A File Icon",
+"Anaconda",
+"Emnet",
+"Git",
+"GitGutter",
+"Materialize",
+"Package Control",
+"Predawn",
+"SideBarEnhancements",
+"SublimeLinter",
+"Theme - SoDaReloaded",
+"Tomorrow Color Schemes",
+
+# Install flake8 through pip as well
+# Ubuntu Font

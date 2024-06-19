@@ -1,0 +1,17 @@
+"A File Icon",
+"Anaconda",
+"Git Commit Message Syntax",
+"GitGutter",
+"Package Control",
+"Predawn",
+"SideBarEnhancements",
+"SublimeLinter",
+"SublimeLinter-flake8",
+"Theme - SoDaReloaded",
+"Tomorrow Color Schemes"
+
+
+# Installer også flake8 igennem pip
+
+
+# Ubuntu Font

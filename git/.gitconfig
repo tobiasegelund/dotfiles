@@ -1,0 +1,52 @@
+[user]
+	email = xxxxxx@xxxxx.com
+	name = Tobias Egelund
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[credential]
+	helper = osxkeychain
+
+[push]
+    autoSetupRemote = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
+[alias]
+	browse = !"                                                                                                                                                                              \
+		function gfzf() {                                                                                                                                                                 \
+			local filter=\"$@\";                                                                                                                                                          \
+			local -a show_filter;                                                                                                                                                         \
+			while [[ \"$#\" -gt 0 ]]; do                                                                                                                                                  \
+				if [[ \"$1\" == \"--\" ]] || [[ \"$1\" != '-'* ]] || [[ \"${#show_filter[@]}\" -gt 0 ]]; then                                                                             \
+					show_filter+=( \"$1\" );                                                                                                                                              \
+				fi;                                                                                                                                                                       \
+				shift;                                                                                                                                                                    \
+			done;                                                                                                                                                                         \
+			if [[ \"${show_filter[0]}\" == '--' ]]; then                                                                                                                                  \
+				show_filter=( \"${show_filter[@]:1}\" );                                                                                                                                  \
+			fi;                                                                                                                                                                           \
+			export LESS='-R';                                                                                                                                                             \
+			export BAT_PAGER='less -S -R -M -i';                                                                                                                                          \
+			git log                                                                                                                                                                       \
+				--graph --color=always --abbrev=7 --glob=\"refs/heads/*\"                                                                                                                 \
+				--format=format:\"%C(bold blue)%h%C(reset) %C(dim white)%an%C(reset)%C(bold yellow)%d%C(reset) %C(white)%s%C(reset) %C(bold green)(%ar)%C(reset)\" $filter |              \
+					fzf --ansi --no-sort --layout=reverse --tiebreak=index                                                                                                                \
+						--preview=\"f() {                                                                                                                                                 \
+								set -- \\$(echo -- \\$@ | rg -o '\\b[a-f0-9]{7,}\\b');                                                                                                    \
+								[ \\$# -eq 0 ] || git show --color=always --format=fuller \\$1 -- \"${show_filter[@]}\" | delta --line-numbers;                                           \
+							};                                                                                                                                                            \
+							f {}\"                                                                                                                                                        \
+						--preview-window=right:60%;                                                                                                                                       \
+		};                                                                                                                                                                                \
+		gfzf                                                                                                                                                                              \
+	"

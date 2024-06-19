@@ -1,0 +1,52 @@
+{
+    "spell_check": false,
+    "rulers":
+    [
+        79, 88
+    ],
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true,
+    "ensure_newline_at_eof_on_save": true,
+    "ignored_packages":
+    [
+        "Vintage",
+    ],
+    "theme": "Default Dark.sublime-theme",
+    "color_scheme": "Packages/Materialize/schemes/Material Spaceblack Oceanic.tmTheme",
+    "fold_buttons": true,
+    "folder_exclude_patterns":
+    [
+        ".svn",
+        ".git",
+        ".hg",
+        "CVS",
+        "__pycache__",
+        ".ipynb_checkpoints"
+    ],
+    "font_size": 12,
+    "file_exclude_patterns":
+    [
+        "*.pyc",
+        "*.pyo",
+        "*.exe",
+        "*.dll",
+        "*.obj",
+        "*.o",
+        "*.a",
+        "*.lib",
+        "*.so",
+        "*.dylib",
+        "*.ncb",
+        "*.sdf",
+        "*.suo",
+        "*.pdb",
+        "*.idb",
+        ".DS_Store",
+        "*.class",
+        "*.psd",
+        "*.db",
+    ],
+    "scroll_past_end": true,
+    "save_on_focus_lost": true,
+}
